@@ -25,7 +25,6 @@ AutomapHostsOnResolve 1
 TransPort 9040
 DNSPort 53
 '''
-
         self.non_tor_net = ["192.168.0.0/16", "172.16.0.0/12"]
         self.non_tor = ["127.0.0.0/9", "127.128.0.0/10", "127.0.0.0/8"]
         self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
