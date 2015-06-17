@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# By rupe
+# Written by rupe
 """
 Tor Iptables script is an anonymizer
 that sets up iptables and tor to route all services
