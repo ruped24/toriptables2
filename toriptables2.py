@@ -72,8 +72,7 @@ if __name__ == '__main__':
     parser.add_argument('-l', '--load',
                         action="store_true",
                         help='This option will load tor iptables rules')
-    parser.add_argument(
-        '-f', '--flush',
+    parser.add_argument('-f', '--flush',
                         action='store_true',
                         help='This option flushes the iptables rules to default')
     args = parser.parse_args()
