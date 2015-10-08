@@ -70,7 +70,7 @@ if __name__ == '__main__':
     parser = ArgumentParser(
     description='Tor Iptables script for loading and unloading iptables rules')
     parser.add_argument('-l', '--load',
-                        action="store_true",
+                        action='store_true',
                         help='This option will load tor iptables rules')
     parser.add_argument('-f', '--flush',
                         action='store_true',
