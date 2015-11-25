@@ -12,5 +12,6 @@ toriptables2.py -h
 * https://check.torproject.org
 * http://dnsleaktest.com
 
-###### Screenshot: 
+###### Screenshots:
+http://bit.ly/1NcLVIW
 http://bit.ly/1NjmDLn
