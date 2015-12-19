@@ -8,7 +8,7 @@ tor
 toriptables2.py -h
 
 #####To test:
-* http://ipchicken.com
+* http://ip.cc
 * https://check.torproject.org
 * http://dnsleaktest.com
 
