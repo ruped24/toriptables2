@@ -32,7 +32,7 @@ DNSPort 53
     self.load_iptables_rules.__init__(self)
 
   def flush_iptables_rules(self):
-    call(["iptables", '-F'])
+    call(["iptables", "-F"])
     call(["iptables", "-t", "nat", "-F"])
 
   def load_iptables_rules(self):
