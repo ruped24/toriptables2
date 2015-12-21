@@ -59,7 +59,7 @@ DNSPort 53
     call(["iptables", "-A", "OUTPUT", "-m", "state", "--state",
           "ESTABLISHED,RELATED", "-j", "ACCEPT"])
 
-    for net in (self.non_tor):
+    for net in self.non_tor:
       call(["iptables", "-A", "OUTPUT", "-d", "%s" % net, "-j", "ACCEPT"])
 
     call(["iptables", "-A", "OUTPUT", "-m", "owner", "--uid-owner", "%s" %
