@@ -49,8 +49,8 @@ DNSPort 53
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-p", "udp", "--dport", "53",
           "-j", "REDIRECT", "--to-ports", "53"])
 
-    for self.net in self.non_tor:
-      call(["iptables", "-t", "nat", "-A", "OUTPUT", "-d", "%s" % self.net,
+    for net in self.non_tor:
+      call(["iptables", "-t", "nat", "-A", "OUTPUT", "-d", "%s" % net,
             "-j", "RETURN"])
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-p", "tcp", "--syn", "-j",
@@ -59,8 +59,8 @@ DNSPort 53
     call(["iptables", "-A", "OUTPUT", "-m", "state", "--state",
           "ESTABLISHED,RELATED", "-j", "ACCEPT"])
 
-    for self.net in (self.non_tor):
-      call(["iptables", "-A", "OUTPUT", "-d", "%s" % self.net, "-j", "ACCEPT"])
+    for net in (self.non_tor):
+      call(["iptables", "-A", "OUTPUT", "-d", "%s" % net, "-j", "ACCEPT"])
 
     call(["iptables", "-A", "OUTPUT", "-m", "owner", "--uid-owner", "%s" %
           self.tor_uid, "-j", "ACCEPT"])
