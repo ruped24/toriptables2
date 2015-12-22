@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# By Rupe
+# Written by Rupe version 2
 """
 Tor Iptables script is an anonymizer
 that sets up iptables and tor to route all services
@@ -11,6 +11,7 @@ from commands import getoutput
 from subprocess import call
 from os.path import isfile
 from os import devnull
+from sys import stdout, stderr
 from atexit import register
 from argparse import ArgumentParser
 
@@ -42,7 +43,7 @@ DNSPort 53
     @register
     def restart_tor():
       fnull = open(devnull, 'w')
-      call(["service", "tor", "restart"], stderr=fnull)
+      call(["service", "tor", "restart"], stdout=fnull, stderr=fnull)
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
