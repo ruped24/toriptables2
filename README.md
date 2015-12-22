@@ -13,5 +13,5 @@ toriptables2.py -h
 * http://dnsleaktest.com
 
 ###### Screenshots:
-* http://bit.ly/1NcLVIW
+* http://bit.ly/1PklH8N
 * http://bit.ly/1NjmDLn
