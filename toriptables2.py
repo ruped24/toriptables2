@@ -88,10 +88,10 @@ if __name__ == '__main__':
 
     if args.load:
       load_tables.load_iptables_rules()
-      print(" {0}".format("[\033[92m+\033[0m] Anonimizer \033[92mON\033[0m"))
+      print(" {0}".format("[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
     elif args.flush:
       load_tables.flush_iptables_rules()
-      print(" {0}".format("[\033[93m!\033[0m] Anonimizer \033[91mOFF\033[0m"))
+      print(" {0}".format("[\033[93m!\033[0m] Anonymizer \033[91mOFF\033[0m"))
     else:
       parser.print_help()
   except Exception as err:
