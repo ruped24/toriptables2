@@ -8,7 +8,7 @@ and traffic including DNS through the tor network.
 
 from __future__ import print_function
 from commands import getoutput
-from subprocess import call
+from subprocess import call, check_call
 from os.path import isfile
 from os import devnull
 from sys import stdout, stderr
@@ -43,8 +43,10 @@ DNSPort 53
     @register
     def restart_tor():
       fnull = open(devnull, 'w')
-      call(["service", "tor", "restart"], stdout=fnull, stderr=fnull)
-      print(" {0}".format("[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
+      tor_restart = check_call(["service", "tor", "restart"],
+                                 stdout=fnull, stderr=fnull)
+      if tor_restart is 0:
+        print(" {0}".format("[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
@@ -52,8 +54,8 @@ DNSPort 53
           "-j", "REDIRECT", "--to-ports", "53"])
 
     for net in self.non_tor:
-      call(["iptables", "-t", "nat", "-A", "OUTPUT", "-d", "%s" % net,
-            "-j", "RETURN"])
+      call(["iptables", "-t", "nat", "-A", "OUTPUT", "-d", "%s" % net, "-j",
+            "RETURN"])
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-p", "tcp", "--syn", "-j",
           "REDIRECT", "--to-ports", "%s" % self.trans_port])
