@@ -30,7 +30,6 @@ DNSPort 53
     self.non_tor = ["127.0.0.0/9", "127.128.0.0/10", "127.0.0.0/8"]
     self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
     self.trans_port = "9040"  # Tor port
-    self.load_iptables_rules.__init__(self)
 
   def flush_iptables_rules(self):
     call(["iptables", "-F"])
