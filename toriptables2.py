@@ -48,8 +48,7 @@ DNSPort %s
       try:
         tor_restart = check_call(
             ["service", "tor", "restart"],
-            stdout=fnull,
-            stderr=fnull)
+             stdout=fnull, stderr=fnull)
         if tor_restart is 0:
           print(" {0}".format(
               "[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
