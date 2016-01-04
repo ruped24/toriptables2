@@ -41,6 +41,8 @@ DNSPort 53
 
     @register
     def restart_tor():
+      import sys
+      sys.tracebacklimit = 0
       fnull = open(devnull, 'w')
       tor_restart = check_call(["service", "tor", "restart"],
                                 stdout=fnull, stderr=fnull)
@@ -72,11 +74,14 @@ DNSPort 53
 
 if __name__ == '__main__':
   parser = ArgumentParser(
-      description='Tor Iptables script for loading and unloading iptables rules')
-  parser.add_argument('-l', '--load',
+      description=
+      'Tor Iptables script for loading and unloading iptables rules')
+  parser.add_argument('-l',
+                      '--load',
                       action='store_true',
                       help='This option will load tor iptables rules')
-  parser.add_argument('-f', '--flush',
+  parser.add_argument('-f',
+                      '--flush',
                       action='store_true',
                       help='This option flushes the iptables rules to default')
   args = parser.parse_args()
