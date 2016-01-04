@@ -8,7 +8,7 @@ and traffic including DNS through the tor network.
 
 from __future__ import print_function
 from commands import getoutput
-from subprocess import call, check_call
+from subprocess import call, check_call, CalledProcessError
 from os.path import isfile
 from os import devnull
 from sys import stdout, stderr
@@ -44,10 +44,13 @@ DNSPort 53
       import sys
       sys.tracebacklimit = 0
       fnull = open(devnull, 'w')
-      tor_restart = check_call(["service", "tor", "restart"],
-                                stdout=fnull, stderr=fnull)
-      if tor_restart is 0:
-        print(" {0}".format("[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
+      try:
+        tor_restart = check_call(["service", "tor", "restart"],
+                                  stdout=fnull, stderr=fnull)
+        if tor_restart is 0:
+          print(" {0}".format("[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
+      except CalledProcessError as err:
+        print("\n[!] Command failed: %s" % err.cmd)
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
@@ -101,4 +104,4 @@ if __name__ == '__main__':
     else:
       parser.print_help()
   except Exception as err:
-    print(" [!] Run as super user: %s" % err[1])
+    print("[!] Run as super user: %s" % err[1])
