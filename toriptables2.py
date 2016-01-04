@@ -41,8 +41,6 @@ DNSPort 53
 
     @register
     def restart_tor():
-      import sys
-      sys.tracebacklimit = 0
       fnull = open(devnull, 'w')
       try:
         tor_restart = check_call(["service", "tor", "restart"],
