@@ -19,6 +19,8 @@ from argparse import ArgumentParser
 class TorIptables(object):
 
   def __init__(self):
+    self.local_dnsport = "53"
+    self.virtual_net = "10.0.0.0/10"
     self.non_tor_net = ["192.168.0.0/16", "172.16.0.0/12"]
     self.non_tor = ["127.0.0.0/9", "127.128.0.0/10", "127.0.0.0/8"]
     self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
@@ -26,11 +28,11 @@ class TorIptables(object):
     self.tor_config_file = '/etc/tor/torrc'
     self.torrc = '''
 ## Transparently route all traffic thru tor on port %s
-VirtualAddrNetwork 10.0.0.0/10
+VirtualAddrNetwork %s
 AutomapHostsOnResolve 1
 TransPort %s
-DNSPort 53
-''' % (self.trans_port, self.trans_port)
+DNSPort %s
+''' % (self.trans_port, self.virtual_net, self.trans_port, self.local_dnsport)
 
   def flush_iptables_rules(self):
     call(["iptables", "-F"])
@@ -44,10 +46,13 @@ DNSPort 53
     def restart_tor():
       fnull = open(devnull, 'w')
       try:
-        tor_restart = check_call(["service", "tor", "restart"],
-                                  stdout=fnull, stderr=fnull)
+        tor_restart = check_call(
+            ["service", "tor", "restart"],
+            stdout=fnull,
+            stderr=fnull)
         if tor_restart is 0:
-          print(" {0}".format("[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
+          print(" {0}".format(
+              "[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
       except CalledProcessError as err:
         print("\n[!] Command failed: %s" % err.cmd)
 
