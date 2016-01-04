@@ -10,7 +10,7 @@ toriptables2.py -h
 #####To test:
 * http://ip.cc
 * https://check.torproject.org
-* http://ifconfig.me/
+* http://witch.valdikss.org.ru/
 * http://dnsleaktest.com
 
 ###### Screenshots:
