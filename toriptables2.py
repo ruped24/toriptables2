@@ -9,7 +9,7 @@ and traffic including DNS through the tor network.
 from __future__ import print_function
 from commands import getoutput
 from subprocess import call, check_call, CalledProcessError
-from os.path import isfile
+from os.path import isfile, basename
 from os import devnull
 from sys import stdout, stderr
 from atexit import register
@@ -27,12 +27,14 @@ class TorIptables(object):
     self.trans_port = "9040"  # Tor port
     self.tor_config_file = '/etc/tor/torrc'
     self.torrc = '''
+## Inserted by %s for tor iptables rules set
 ## Transparently route all traffic thru tor on port %s
 VirtualAddrNetwork %s
 AutomapHostsOnResolve 1
 TransPort %s
 DNSPort %s
-''' % (self.trans_port, self.virtual_net, self.trans_port, self.local_dnsport)
+''' % (basename(__file__), self.trans_port, self.virtual_net,
+        self.trans_port, self.local_dnsport)
 
   def flush_iptables_rules(self):
     call(["iptables", "-F"])
