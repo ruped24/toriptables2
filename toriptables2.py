@@ -19,17 +19,18 @@ from argparse import ArgumentParser
 class TorIptables(object):
 
   def __init__(self):
-    self.tor_config_file = '/etc/tor/torrc'
-    self.torrc = '''
-VirtualAddrNetwork 10.0.0.0/10
-AutomapHostsOnResolve 1
-TransPort 9040
-DNSPort 53
-'''
     self.non_tor_net = ["192.168.0.0/16", "172.16.0.0/12"]
     self.non_tor = ["127.0.0.0/9", "127.128.0.0/10", "127.0.0.0/8"]
     self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
     self.trans_port = "9040"  # Tor port
+    self.tor_config_file = '/etc/tor/torrc'
+    self.torrc = '''
+## Transparently route all traffic thru tor on port %s
+VirtualAddrNetwork 10.0.0.0/10
+AutomapHostsOnResolve 1
+TransPort %s
+DNSPort 53
+''' % (self.trans_port, self.trans_port)
 
   def flush_iptables_rules(self):
     call(["iptables", "-F"])
