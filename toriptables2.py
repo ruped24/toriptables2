@@ -101,4 +101,4 @@ if __name__ == '__main__':
     else:
       parser.print_help()
   except Exception as err:
-    print(err)
+    print(" [!] Run as super user: %s" % err[1])
