@@ -60,8 +60,7 @@ DNSPort %s
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-p", "udp", "--dport",
-          self.local_dnsport, "-j", "REDIRECT", "--to-ports", self.local_dnsport
-         ])
+          self.local_dnsport, "-j", "REDIRECT", "--to-ports", self.local_dnsport])
 
     for net in self.non_tor:
       call(["iptables", "-t", "nat", "-A", "OUTPUT", "-d", "%s" % net, "-j",
