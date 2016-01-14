@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 # Written by Rupe version 2
+#
 """
 Tor Iptables script is an anonymizer
 that sets up iptables and tor to route all services
@@ -26,15 +27,15 @@ class TorIptables(object):
     self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
     self.trans_port = "9040"  # Tor port
     self.tor_config_file = '/etc/tor/torrc'
-    self.torrc = '''
+    self.torrc = r'''
 ## Inserted by %s for tor iptables rules set
 ## Transparently route all traffic thru tor on port %s
 VirtualAddrNetwork %s
 AutomapHostsOnResolve 1
 TransPort %s
 DNSPort %s
-''' % (basename(__file__), self.trans_port, self.virtual_net,
-        self.trans_port, self.local_dnsport)
+''' % (basename(__file__), self.trans_port, self.virtual_net, 
+       self.trans_port, self.local_dnsport)
 
   def flush_iptables_rules(self):
     call(["iptables", "-F"])
@@ -48,17 +49,19 @@ DNSPort %s
     def restart_tor():
       fnull = open(devnull, 'w')
       try:
-        tor_restart = check_call(["service", "tor", "restart"], 
-                                  stdout=fnull, stderr=fnull)
+        tor_restart = check_call(["service", "tor", "restart"],
+                                 stdout=fnull, stderr=fnull)
         if tor_restart is 0:
-          print(" {0}".format("[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
+          print(" {0}".format(
+              "[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
       except CalledProcessError as err:
         print("\n[!] Command failed: %s" % err.cmd)
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
-    call(["iptables", "-t", "nat", "-A", "OUTPUT", "-p", "udp", "--dport", "53",
-          "-j", "REDIRECT", "--to-ports", "53"])
+    call(["iptables", "-t", "nat", "-A", "OUTPUT", "-p", "udp", "--dport",
+          self.local_dnsport, "-j", "REDIRECT", "--to-ports", self.local_dnsport
+         ])
 
     for net in self.non_tor:
       call(["iptables", "-t", "nat", "-A", "OUTPUT", "-d", "%s" % net, "-j",
