@@ -15,6 +15,8 @@ from os import devnull
 from sys import stdout, stderr
 from atexit import register
 from argparse import ArgumentParser
+from json import load
+from urllib2 import urlopen
 
 
 class TorIptables(object):
@@ -50,12 +52,16 @@ DNSPort %s
       fnull = open(devnull, 'w')
       try:
         tor_restart = check_call(["service", "tor", "restart"],
-                                 stdout=fnull, stderr=fnull)
+                                  stdout=fnull, stderr=fnull)
         if tor_restart is 0:
           print(" {0}".format(
-              "[\033[92m+\033[0m] Anonymizer \033[92mON\033[0m"))
+              "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
+          print(" {0}".format("[\033[92m*\033[0m] Getting public IP, please wait ..."))
+          my_public_ip = load(urlopen('http://jsonip.com'))['ip']
+          print(" {0}".format(
+              "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
       except CalledProcessError as err:
-        print("\n[!] Command failed: %s" % err.cmd)
+        print("[!] Command failed: %s" % err.cmd)
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
@@ -105,7 +111,8 @@ if __name__ == '__main__':
       load_tables.load_iptables_rules()
     elif args.flush:
       load_tables.flush_iptables_rules()
-      print(" {0}".format("[\033[93m!\033[0m] Anonymizer \033[91mOFF\033[0m"))
+      print(" {0}".format(
+          "[\033[93m!\033[0m] Anonymizer status \033[91m[OFF]\033[0m"))
     else:
       parser.print_help()
   except Exception as err:
