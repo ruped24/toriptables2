@@ -16,7 +16,7 @@ from sys import stdout, stderr
 from atexit import register
 from argparse import ArgumentParser
 from json import load
-from urllib2 import urlopen
+from urllib2 import urlopen, URLError
 
 
 class TorIptables(object):
@@ -57,9 +57,13 @@ DNSPort %s
           print(" {0}".format(
               "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
           print(" {0}".format("[\033[92m*\033[0m] Getting public IP, please wait ..."))
-          my_public_ip = load(urlopen('http://jsonip.com'))['ip']
-          print(" {0}".format(
-              "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
+          try:
+            my_public_ip = load(urlopen('http://jsonip.com'))['ip']
+          except URLError:
+            print(" \033[91m[!]\033[0m Can't get public ip address!")
+          else:
+            print(" {0}".format(
+                "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
       except CalledProcessError as err:
         print("[!] Command failed: %s" % err.cmd)
 
