@@ -8,7 +8,7 @@ tor
 toriptables2.py -h
 
 #####To test:
-* http://ip.cc
+* http://ip.cc (slow)
 * http://ifconfig.me
 * https://check.torproject.org
 * http://witch.valdikss.org.ru/
