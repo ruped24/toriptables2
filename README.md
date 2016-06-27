@@ -11,7 +11,8 @@ toriptables2.py -h
 * http://ip.cc
 * http://ifconfig.me
 * https://check.torproject.org
-* http://witch.valdikss.org.ru/
+* http://witch.valdikss.org.ru
+* https://ipleak.net
 * http://dnsleaktest.com
 
 ###### Screenshots:
