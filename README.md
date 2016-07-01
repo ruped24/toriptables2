@@ -8,8 +8,7 @@ tor
 toriptables2.py -h
 
 #####To test:
-* http://ip.cc
-* http://ifconfig.me
+* http://ipchicken.com
 * https://check.torproject.org
 * http://witch.valdikss.org.ru
 * https://ipleak.net
