@@ -1,5 +1,4 @@
 #! /usr/bin/env python
-#! /usr/bin/env python
 # Written by Rupe version 2
 #
 """
@@ -17,6 +16,7 @@ from sys import stdout, stderr
 from atexit import register
 from argparse import ArgumentParser
 from json import load
+from pynotify import init, Notification
 from urllib2 import urlopen, URLError
 
 
@@ -61,12 +61,14 @@ DNSPort %s
           try:
             my_public_ip = load(urlopen('http://jsonip.com'))['ip']
           except URLError:
-            my_public_ip = None  
-            my_public_ip = getoutput('wget -qO - v4.ifconfig.co')
-            if not my_public_ip:
-              exit(" \033[91m[!]\033[0m Can't get public ip address!")
-          print(" {0}".format(
-              "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
+            print(" \033[91m[!]\033[0m Can't get public ip address!")
+          else:
+            print(" {0}".format(
+                "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
+            init('toriptables2')
+            my_ip = Notification("Your public IP address is %s" % my_public_ip)
+            my_ip.show()
+            
       except CalledProcessError as err:
         print("[!] Command failed: %s" % err.cmd)
 
@@ -120,6 +122,14 @@ if __name__ == '__main__':
       load_tables.flush_iptables_rules()
       print(" {0}".format(
           "[\033[93m!\033[0m] Anonymizer status \033[91m[OFF]\033[0m"))
+      try:
+        my_real_ip = load(urlopen('http://jsonip.com'))['ip']
+      except URLError:
+        pass
+      else:
+        init('toriptables2')
+        my_own_ip = Notification("Your public IP address is %s" % my_real_ip)
+        my_own_ip.show()
     else:
       parser.print_help()
   except Exception as err:
