@@ -66,7 +66,7 @@ DNSPort %s
             print(" {0}".format(
                 "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))  
           except:
-              print(" \033[91m[!]\033[0m Can't get public ip address!")  
+            print(" \033[91m[!]\033[0m Can't get public ip address!")  
       except CalledProcessError as err:
         print("[!] Command failed: %s" % err.cmd)
 
