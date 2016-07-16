@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+#! /usr/bin/env python
 # Written by Rupe version 2
 #
 """
@@ -58,12 +59,14 @@ DNSPort %s
               "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
           print(" {0}".format("[\033[92m*\033[0m] Getting public IP, please wait ..."))
           try:
-            my_public_ip = load(urlopen('http://jsonip.com'))['ip']
-          except URLError:
-            print(" \033[91m[!]\033[0m Can't get public ip address!")
-          else:
+            try:
+              my_public_ip = load(urlopen('http://jsonip.com'))['ip']
+            except URLError:
+              my_public_ip = getoutput('wget -qO - v4.ifconfig.co')
             print(" {0}".format(
-                "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
+                "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))  
+          except:
+              print(" \033[91m[!]\033[0m Can't get public ip address!")  
       except CalledProcessError as err:
         print("[!] Command failed: %s" % err.cmd)
 
