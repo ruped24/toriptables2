@@ -67,7 +67,7 @@ DNSPort %s
           print(" {0}".format(
               "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
       except CalledProcessError as err:
-        print("[!] Command failed: %s" % err.cmd)
+        print("\033[91m[!] Command failed: %s\033[0m" % ' '.join(err.cmd))
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
