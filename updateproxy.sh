@@ -8,7 +8,7 @@ DELAY=$2
 
 #Check if arg was received
 if [ -z "$2" ]; then 
-	echo "USAGE: ./updateproxy.sh <number-of-repetitions <delay-between-repetitions>"
+	echo "USAGE: ./updateproxy.sh <number-of-repetitions> <delay-between-repetitions>"
 	exit
 fi
 
