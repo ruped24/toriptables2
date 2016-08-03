@@ -15,9 +15,9 @@ fi
 #iptables dropping packets makes sure your real ip isn't leaked if webpage
 #is being fetched during the proxy reload.
 while [ $COUNTER -lt $MAX ]; do
-	iptables -P OUTPUT DROP
+	iptables -w -P OUTPUT DROP
 	python $FILE -l
-	iptables -P OUTPUT ACCEPT
+	iptables -w -P OUTPUT ACCEPT
 	sleep $DELAY
 	let COUNTER=COUNTER+1
 done
