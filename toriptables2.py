@@ -17,7 +17,7 @@ from atexit import register
 from argparse import ArgumentParser
 from json import load
 from urllib2 import urlopen, URLError
-
+from time import sleep
 
 class TorIptables(object):
 
@@ -56,18 +56,30 @@ DNSPort %s
         if tor_restart is 0:
           print(" {0}".format(
               "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
-          print(" {0}".format("[\033[92m*\033[0m] Getting public IP, please wait ..."))
-          try:
-            my_public_ip = load(urlopen('http://jsonip.com'))['ip']
-          except URLError:
-            my_public_ip = None  
+          print(" {0}".format("[\033[92m*\033[0m] Getting public IP, please wait..."))
+          retries = 0
+          my_public_ip = None
+          while retries < 12 and not my_public_ip:
+            retries += 1
+            try:
+              my_public_ip = load(urlopen('http://jsonip.com/'))['ip']
+            except URLError:
+              sleep(5)
+              print(" [\033[93m?\033[0m] Still waiting for IP address...")
+          print
+          if not my_public_ip:
             my_public_ip = getoutput('wget -qO - v4.ifconfig.co')
-            if not my_public_ip:
-              exit(" \033[91m[!]\033[0m Can't get public ip address!")
+          if not my_public_ip:
+            exit(" \033[91m[!]\033[0m Can't get public ip address!")
           print(" {0}".format(
               "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
       except CalledProcessError as err:
         print("\033[91m[!] Command failed: %s\033[0m" % ' '.join(err.cmd))
+
+    # See https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy#WARNING
+    # See https://lists.torproject.org/pipermail/tor-talk/2014-March/032503.html
+    call(["iptables", "-I", "OUTPUT", "!", "-o", "lo", "!", "-d", "127.0.0.1", "!", "-s", "127.0.0.1", "-p", "tcp", "-m", "tcp", "--tcp-flags", "ACK,FIN", "ACK,FIN", "-j", "DROP"])
+    call(["iptables", "-I", "OUTPUT", "!", "-o", "lo", "!", "-d", "127.0.0.1", "!", "-s", "127.0.0.1", "-p", "tcp", "-m", "tcp", "--tcp-flags", "ACK,RST", "ACK,RST", "-j", "DROP"])
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
