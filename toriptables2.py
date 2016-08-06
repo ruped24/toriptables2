@@ -19,11 +19,13 @@ from json import load
 from urllib2 import urlopen, URLError
 from time import sleep
 
+
 class TorIptables(object):
 
   def __init__(self):
     self.local_dnsport = "53"  # DNSPort
     self.virtual_net = "10.0.0.0/10"  # VirtualAddrNetwork
+    self.local_loopback = "127.0.0.1"
     self.non_tor_net = ["192.168.0.0/16", "172.16.0.0/12"]
     self.non_tor = ["127.0.0.0/9", "127.128.0.0/10", "127.0.0.0/8"]
     self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
@@ -51,12 +53,15 @@ DNSPort %s
     def restart_tor():
       fnull = open(devnull, 'w')
       try:
-        tor_restart = check_call(["service", "tor", "restart"],
-                                  stdout=fnull, stderr=fnull)
+        tor_restart = check_call(
+            ["service", "tor", "restart"],
+              stdout=fnull, stderr=fnull)
+
         if tor_restart is 0:
           print(" {0}".format(
               "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
-          print(" {0}".format("[\033[92m*\033[0m] Getting public IP, please wait..."))
+          print(" {0}".format(
+              "[\033[92m*\033[0m] Getting public IP, please wait..."))
           retries = 0
           my_public_ip = None
           while retries < 12 and not my_public_ip:
@@ -71,15 +76,18 @@ DNSPort %s
             my_public_ip = getoutput('wget -qO - v4.ifconfig.co')
           if not my_public_ip:
             exit(" \033[91m[!]\033[0m Can't get public ip address!")
-          print(" {0}".format(
-              "[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
+          print(" {0}".format("[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
       except CalledProcessError as err:
         print("\033[91m[!] Command failed: %s\033[0m" % ' '.join(err.cmd))
 
     # See https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy#WARNING
     # See https://lists.torproject.org/pipermail/tor-talk/2014-March/032503.html
-    call(["iptables", "-I", "OUTPUT", "!", "-o", "lo", "!", "-d", "127.0.0.1", "!", "-s", "127.0.0.1", "-p", "tcp", "-m", "tcp", "--tcp-flags", "ACK,FIN", "ACK,FIN", "-j", "DROP"])
-    call(["iptables", "-I", "OUTPUT", "!", "-o", "lo", "!", "-d", "127.0.0.1", "!", "-s", "127.0.0.1", "-p", "tcp", "-m", "tcp", "--tcp-flags", "ACK,RST", "ACK,RST", "-j", "DROP"])
+    call(["iptables", "-I", "OUTPUT", "!", "-o", "lo", "!", "-d",
+          self.local_loopback, "!", "-s", self.local_loopback, "-p", "tcp",
+          "-m", "tcp", "--tcp-flags", "ACK,FIN", "ACK,FIN", "-j", "DROP"])
+    call(["iptables", "-I", "OUTPUT", "!", "-o", "lo", "!", "-d",
+          self.local_loopback, "!", "-s", self.local_loopback, "-p", "tcp",
+          "-m", "tcp", "--tcp-flags", "ACK,RST", "ACK,RST", "-j", "DROP"])
 
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
