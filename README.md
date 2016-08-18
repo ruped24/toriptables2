@@ -23,4 +23,4 @@ toriptables2.py -h
 tor python-notify
 
 ###### Screenshot:
-*http://bit.ly/2bJO9WA
+* http://bit.ly/2bJO9WA
