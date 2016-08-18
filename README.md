@@ -17,3 +17,8 @@ toriptables2.py -h
 ###### Screenshots:
 * http://bit.ly/1otCXOn
 * http://bit.ly/1NjmDLn
+
+##[toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
+#####Dependencies:
+tor python-notify
+
