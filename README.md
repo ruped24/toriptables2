@@ -14,6 +14,10 @@ toriptables2.py -h
 * https://ipleak.net
 * http://dnsleaktest.com
 
+
+#####To change IP w/o reload:
+sudo kill -HUP $(pidof tor)
+
 ###### Screenshots:
 * http://bit.ly/1otCXOn
 * http://bit.ly/1NjmDLn
