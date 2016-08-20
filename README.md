@@ -17,9 +17,11 @@ toriptables2.py -h
 
 
 #####To change IP w/o reload:
+ Refresh Check Tor project webpage
 ```bash
 sudo kill -HUP $(pidof tor)
 ```
+
 ###### Screenshots:
 [Parrot Security OS](http://bit.ly/2b6IjNP)
 
