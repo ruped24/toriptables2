@@ -22,7 +22,9 @@ sudo kill -HUP $(pidof tor)
 ```
 ###### Screenshots:
 * http://bit.ly/1otCXOn
+* http://bit.ly/2b6IjNP
 * http://bit.ly/1NjmDLn
+
 
 ##[toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
 #####Dependencies:
