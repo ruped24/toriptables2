@@ -33,4 +33,4 @@ sudo kill -HUP $(pidof tor)
 tor python-notify
 
 ###### Screenshot:
-[Tor Iptables2 with desktop notification](http://bit.ly/2bJO9WA)
+[Tor Iptables2G with desktop notification](http://bit.ly/2bJO9WA)
