@@ -21,9 +21,9 @@ toriptables2.py -h
 sudo kill -HUP $(pidof tor)
 ```
 ###### Screenshots:
-[Kali Linux](http://bit.ly/1otCXOn)
-
 [Parrot Security OS](http://bit.ly/2b6IjNP)
+
+[Kali Linux, Rolling Edition](http://bit.ly/1otCXOn)
 
 [IP Tables rules loaded](http://bit.ly/1NjmDLn)
 
