@@ -17,7 +17,7 @@ toriptables2.py -h
 
 
 #####To change IP w/o reload:
- Refresh Check Tor project webpage
+######Refresh Check Tor project webpage
 ```bash
 sudo kill -HUP $(pidof tor)
 ```
