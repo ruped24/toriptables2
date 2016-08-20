@@ -36,3 +36,7 @@ tor python-notify
 
 ###### Screenshot:
 [Tor Iptables2G with desktop notification](http://bit.ly/2bJO9WA)
+
+
+####Distro Specific Fix:
+[Parrot Security OS 3.1.1 Anonsurf](https://www.inforge.net/xi/threads/parrot-security-os-3-1-1-anonsurf-fix-tor-by-vap0r.457379/) *Note: Translation needed*
