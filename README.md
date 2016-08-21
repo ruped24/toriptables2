@@ -11,7 +11,7 @@ toriptables2.py -h
 #####To test:
 * [What is my IP address](http://whatismyipaddress.com)
 * [Check Tor Project](https://check.torproject.org)
-* [Which proxy checker](http://witch.valdikss.org.ru)
+* [Witch proxy checker](http://witch.valdikss.org.ru)
 * [IP leak test](https://ipleak.net)
 * [DNS leak test](http://dnsleaktest.com)
 
