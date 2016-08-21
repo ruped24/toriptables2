@@ -9,11 +9,11 @@ tor
 toriptables2.py -h
 ```
 #####To test:
-* http://ipchicken.com
-* https://check.torproject.org
-* http://witch.valdikss.org.ru
-* https://ipleak.net
-* http://dnsleaktest.com
+* [What is my IP address](http://whatismyipaddress.com)
+* [Check Tor Project](https://check.torproject.org)
+* [Which proxy checker](http://witch.valdikss.org.ru)
+* [IP leak test](https://ipleak.net)
+* [DNS leak test](http://dnsleaktest.com)
 
 
 #####To change IP w/o reload:
