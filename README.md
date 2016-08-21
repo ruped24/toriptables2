@@ -23,11 +23,11 @@ sudo kill -HUP $(pidof tor)
 ```
 
 ###### Screenshots:
-[Parrot Security OS](http://bit.ly/2b6IjNP)
+* [Parrot Security OS](http://bit.ly/2b6IjNP)
 
-[Kali Linux, Rolling Edition](http://bit.ly/1otCXOn)
+* [Kali Linux, Rolling Edition](http://bit.ly/1otCXOn)
 
-[Tor IP Tables rules loaded](http://bit.ly/1NjmDLn)
+* [Tor IP Tables rules loaded](http://bit.ly/1NjmDLn)
 
 
 ##[toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
@@ -35,8 +35,8 @@ sudo kill -HUP $(pidof tor)
 tor python-notify
 
 ###### Screenshot:
-[Tor Iptables2G with desktop notification](http://bit.ly/2bJO9WA)
+* [Tor Iptables2G with desktop notification](http://bit.ly/2bJO9WA)
 
 
 ####Distro Specific Fix:
-[Parrot Security OS 3.1.1 Anonsurf](https://www.inforge.net/xi/threads/parrot-security-os-3-1-1-anonsurf-fix-tor-by-vap0r.457379/) *Note: Translation needed*
+* [Parrot Security OS 3.1.1 Anonsurf](https://www.inforge.net/xi/threads/parrot-security-os-3-1-1-anonsurf-fix-tor-by-vap0r.457379/) *Note: Translation needed*
