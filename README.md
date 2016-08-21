@@ -22,7 +22,7 @@ toriptables2.py -h
 sudo kill -HUP $(pidof tor)
 ```
 
-###### Screenshots:
+##### Screenshots:
 * [Parrot Security OS](http://bit.ly/2b6IjNP)
 
 * [Kali Linux, Rolling Edition](http://bit.ly/1otCXOn)
