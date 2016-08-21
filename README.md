@@ -5,7 +5,7 @@ Tor Iptables script is an anonymizer that sets up iptables and tor to route all 
 tor
 
 #####Usage:
-```
+```python
 toriptables2.py -h
 ```
 #####To test:
@@ -18,7 +18,7 @@ toriptables2.py -h
 
 #####To change IP w/o reload:
 ######Refresh Check Tor project webpage
-```
+```bash
 sudo kill -HUP $(pidof tor)
 ```
 
