@@ -29,7 +29,7 @@ sudo kill -HUP $(pidof tor)
 
 * [Kali Linux, Rolling Edition](http://bit.ly/1otCXOn)
 
-* [Tor IP Tables rules loaded](http://bit.ly/1NjmDLn)
+* [Tor IPTables rules loaded](http://bit.ly/1NjmDLn)
 
 ---
 ##[toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
