@@ -23,7 +23,7 @@ sudo kill -HUP $(pidof tor)
 ```
 
 ##### Screenshots:
-* [BlackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
+* [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
 
 * [Parrot Security OS](http://bit.ly/2b6IjNP)
 
