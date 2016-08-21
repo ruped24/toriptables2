@@ -31,7 +31,7 @@ sudo kill -HUP $(pidof tor)
 
 * [Tor IP Tables rules loaded](http://bit.ly/1NjmDLn)
 
-
+---
 ##[toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
 #####Dependencies:
 tor python-notify
