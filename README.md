@@ -36,7 +36,7 @@ sudo kill -HUP $(pidof tor)
 ####Dependencies:
 tor python-notify
 
-##### Screenshot:
+#### Screenshot:
 * [Tor Iptables2G with desktop notification](http://bit.ly/2bJO9WA)
 
 
