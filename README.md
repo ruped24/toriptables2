@@ -1,14 +1,14 @@
 # toriptables2
 Tor Iptables script is an anonymizer that sets up iptables and tor to route all services and traffic including DNS through the tor network.
 
-#####Dependencies:
+####Dependencies:
 tor
 
-#####Usage:
+####Usage:
 ```python
 toriptables2.py -h
 ```
-#####To test:
+####To test:
 * [What is my IP address](http://whatismyipaddress.com)
 * [Check Tor Project](https://check.torproject.org)
 * [Witch proxy checker](http://witch.valdikss.org.ru)
@@ -16,13 +16,13 @@ toriptables2.py -h
 * [DNS leak test](http://dnsleaktest.com)
 
 
-#####To change IP w/o reload:
-######Refresh Check Tor project webpage
+####To change IP w/o reload:
+#####Refresh Check Tor project webpage
 ```bash
 sudo kill -HUP $(pidof tor)
 ```
 
-##### Screenshots:
+#### Screenshots:
 * [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
 
 * [Parrot Security OS](http://bit.ly/2b6IjNP)
@@ -33,12 +33,12 @@ sudo kill -HUP $(pidof tor)
 
 ---
 ##[toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
-#####Dependencies:
+####Dependencies:
 tor python-notify
 
-###### Screenshot:
+##### Screenshot:
 * [Tor Iptables2G with desktop notification](http://bit.ly/2bJO9WA)
 
 
-####Distro Specific Fix:
+###Distro Specific Fix:
 * [Parrot Security OS 3.1.1 Anonsurf](https://www.inforge.net/xi/threads/parrot-security-os-3-1-1-anonsurf-fix-tor-by-vap0r.457379/) *Note: Translation needed*
