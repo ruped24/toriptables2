@@ -12,7 +12,7 @@ toriptables2.py -h
 * [What is my IP address](http://whatismyipaddress.com)
 * [Check Tor Project](https://check.torproject.org)
 * [Witch proxy checker](http://witch.valdikss.org.ru)
-* [IP leak test](https://ipleak.net)
+* [IP leak test](http://www.doileak.com/)
 * [DNS leak test](http://dnsleaktest.com)
 * [What every Browser knows about you](http://webkay.robinlinus.com/)
 
