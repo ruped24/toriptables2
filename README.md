@@ -14,6 +14,7 @@ toriptables2.py -h
 * [Witch proxy checker](http://witch.valdikss.org.ru)
 * [IP leak test](https://ipleak.net)
 * [DNS leak test](http://dnsleaktest.com)
+* [What every Browser knows about you](http://webkay.robinlinus.com/)
 
 
 ####To change IP w/o reload:
