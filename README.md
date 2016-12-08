@@ -5,7 +5,7 @@ Tor Iptables script is an anonymizer that sets up iptables and tor to route all 
 ####Dependencies:
 tor
 
-####Usage:
+####[Usage](https://github.com/ruped24/toriptables2/wiki/Optional-installation-methods-for-toriptables2.py#executing-toriptables2py-as-a-standalone-executable):
 ```python
 toriptables2.py -h
 ```
