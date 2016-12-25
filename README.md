@@ -44,6 +44,8 @@ tor python-notify
 
 ###Distro Specific Fix:
 * [Parrot Security OS 3.1.1 Anonsurf](https://www.inforge.net/xi/threads/parrot-security-os-3-1-1-anonsurf-fix-tor-by-vap0r.457379/) *Note: Translation needed*
+* [Arch Linux](https://github.com/ruped24/toriptables2/pull/5/files) 
+
 
 ---
 * [Optional Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
