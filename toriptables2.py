@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python2
 # Written by Rupe version 2
 #
 """
@@ -28,7 +28,7 @@ class TorIptables(object):
     self.local_loopback = "127.0.0.1" # Local loopback 
     self.non_tor_net = ["192.168.0.0/16", "172.16.0.0/12"]
     self.non_tor = ["127.0.0.0/9", "127.128.0.0/10", "127.0.0.0/8"]
-    self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
+    self.tor_uid = getoutput("id -ur tor")  # Tor user uid
     self.trans_port = "9040"  # Tor port
     self.tor_config_file = '/etc/tor/torrc'
     self.torrc = r'''
@@ -54,7 +54,7 @@ DNSPort %s
       fnull = open(devnull, 'w')
       try:
         tor_restart = check_call(
-            ["service", "tor", "restart"],
+            ["systemctl", "restart", "tor"],
               stdout=fnull, stderr=fnull)
 
         if tor_restart is 0:
