@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python2
 # Written by Rupe version 2
 #
 """
@@ -23,12 +23,12 @@ from time import sleep
 class TorIptables(object):
 
   def __init__(self):
-    self.local_dnsport = "53"  # DNSPort
+    self.local_dnsport = "5300"  # DNSPort
     self.virtual_net = "10.0.0.0/10"  # VirtualAddrNetwork
     self.local_loopback = "127.0.0.1" # Local loopback 
     self.non_tor_net = ["192.168.0.0/16", "172.16.0.0/12"]
     self.non_tor = ["127.0.0.0/9", "127.128.0.0/10", "127.0.0.0/8"]
-    self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
+    self.tor_uid = getoutput("id -ur debian-tor 2>/dev/null  || id -ur tor 2>/dev/null")  # Tor user uid
     self.trans_port = "9040"  # Tor port
     self.tor_config_file = '/etc/tor/torrc'
     self.torrc = r'''
@@ -54,7 +54,7 @@ DNSPort %s
       fnull = open(devnull, 'w')
       try:
         tor_restart = check_call(
-            ["service", "tor", "restart"],
+            ["systemctl", "restart", "tor"],
               stdout=fnull, stderr=fnull)
 
         if tor_restart is 0:
@@ -92,7 +92,7 @@ DNSPort %s
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-m", "owner", "--uid-owner",
           "%s" % self.tor_uid, "-j", "RETURN"])
     call(["iptables", "-t", "nat", "-A", "OUTPUT", "-p", "udp", "--dport",
-          self.local_dnsport, "-j", "REDIRECT", "--to-ports", self.local_dnsport])
+          "53", "-j", "REDIRECT", "--to-ports", self.local_dnsport])
 
     for net in self.non_tor:
       call(["iptables", "-t", "nat", "-A", "OUTPUT", "-d", "%s" % net, "-j",
