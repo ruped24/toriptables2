@@ -24,7 +24,7 @@ toriptables2.py -h
 sudo kill -HUP $(pidof tor)
 ```
 #### [To automate changing IP](https://github.com/ruped24/tor_ip_switcher):
-[Screenshot](https://drive.google.com/file/d/0B79r4wTVj-CZQzRkVDhQR3hRSlE/view)
+* [Screenshot](https://drive.google.com/file/d/0B79r4wTVj-CZQzRkVDhQR3hRSlE/view)
 
 ```
 tor_ip_switcher.py
