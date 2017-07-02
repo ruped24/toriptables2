@@ -31,7 +31,7 @@ tor_ip_switcher.py
 ```
 
 #### Screenshots:
-* [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
+* [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZWGVXZUU5eU1vQ1U)
 
 * [Parrot Security OS](http://bit.ly/2b6IjNP)
 
