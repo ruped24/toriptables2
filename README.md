@@ -26,9 +26,7 @@ sudo kill -HUP $(pidof tor)
 #### [To automate changing IP](https://github.com/ruped24/tor_ip_switcher):
 * [Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZUEY0MXV2bVloUWM)
 
-```
-tor_ip_switcher.py
-```
+* [tor_ip_switcher.py](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
 
 #### Screenshots:
 * [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
