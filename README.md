@@ -46,7 +46,7 @@ tor python-notify
 * [Tor Iptables2G with desktop notification](http://bit.ly/2bJO9WA)
 
 ---
-* [Troubleshooting](https://github.com/ruped24/toriptables2/wiki/Troubleshooting#distro-specific-fix)
+* [Troubleshooting](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
 
 * [Installation Video](https://www.youtube.com/watch?v=3mEpnzY5ZZo)
 
