@@ -48,5 +48,7 @@ tor python-notify
 ---
 * [Troubleshooting](https://github.com/ruped24/toriptables2/wiki/Troubleshooting#distro-specific-fix)
 
+* [Installation Video](https://www.youtube.com/watch?v=3mEpnzY5ZZo)
+
 * [Optional Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
 
