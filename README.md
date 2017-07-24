@@ -26,7 +26,7 @@ sudo kill -HUP $(pidof tor)
 #### To automate changing Tor IP:
 * [Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZOGJadlBtWWxPWFk)
 
-* [tor_ip_switcher.py](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
+* [tor_ip_switcher](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
 
 #### Screenshots:
 * [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
@@ -42,8 +42,7 @@ sudo kill -HUP $(pidof tor)
 #### Dependencies:
 tor python-notify
 
-#### Screenshot:
-* [Tor Iptables2G with desktop notification](http://bit.ly/2bJO9WA)
+#### [Screenshot](http://bit.ly/2bJO9WA)
 
 ---
 * [Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
