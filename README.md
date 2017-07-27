@@ -42,7 +42,7 @@ sudo kill -HUP $(pidof tor)
 #### Dependencies:
 tor python-notify
 
-#### [Screenshot](http://bit.ly/2bJO9WA)
+[Screenshot](http://bit.ly/2bJO9WA)
 
 ---
 * [Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
