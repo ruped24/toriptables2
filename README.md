@@ -31,18 +31,18 @@ sudo kill -HUP $(pidof tor)
 #### Screenshots:
 * [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
 
-* [Parrot Security OS](http://bit.ly/2b6IjNP)
+* [Parrot Security OS](https://drive.google.com/open?id=0B79r4wTVj-CZempZakRwVVd0Rmc)
 
-* [Kali Linux, Rolling Edition](http://bit.ly/1otCXOn)
+* [Kali Linux, Rolling Edition](https://drive.google.com/open?id=0B79r4wTVj-CZMzlnRWZTcVcyUnc)
 
-* [Tor IPTables rules loaded](http://bit.ly/1NjmDLn)
+* [Tor IPTables rules loaded](https://drive.google.com/open?id=0B79r4wTVj-CZT0NMV2VZRTM1REE)
 
 ---
 ## [toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
 #### Dependencies:
 tor python-notify
 
-* [Screenshot](http://bit.ly/2bJO9WA)
+* [Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
 
 ---
 [Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
