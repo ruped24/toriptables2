@@ -47,7 +47,5 @@ tor python-notify
 ---
 [Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
 
-[TorIptables2 Install Video](https://www.youtube.com/watch?v=3mEpnzY5ZZo)
-
 [Optional Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
 
