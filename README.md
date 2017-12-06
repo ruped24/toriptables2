@@ -15,6 +15,7 @@ toriptables2.py -h
 * [Witch proxy checker](http://witch.valdikss.org.ru)
 * [IP leak test](http://www.doileak.com/)
 * [DNS leak test](http://dnsleaktest.com)
+* [Test my IPv6](http://testmyipv6.com/)
 * [What every Browser knows about you](http://webkay.robinlinus.com/)
 
 
