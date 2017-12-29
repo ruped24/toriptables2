@@ -32,8 +32,6 @@ sudo kill -HUP $(pidof tor)
 #### Screenshots:
 * [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
 
-* [Parrot Security OS](https://drive.google.com/open?id=0B79r4wTVj-CZempZakRwVVd0Rmc)
-
 * [Kali Linux, Rolling Edition](https://drive.google.com/open?id=0B79r4wTVj-CZMzlnRWZTcVcyUnc)
 
 * [Tor IPTables rules loaded](https://drive.google.com/open?id=0B79r4wTVj-CZT0NMV2VZRTM1REE)
