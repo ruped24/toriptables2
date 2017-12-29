@@ -30,7 +30,7 @@ sudo kill -HUP $(pidof tor)
 * [tor_ip_switcher](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
 
 #### Screenshots:
-* [BackBox Linux](https://drive.google.com/open?id=0B79r4wTVj-CZQ1ZBeG0xdHFiN0k)
+* [KaliBang Linux](https://drive.google.com/open?id=1fHtOvukq0j3dcSKk6Yw_d2L3JuXnjNav)
 
 * [Kali Linux, Rolling Edition](https://drive.google.com/open?id=0B79r4wTVj-CZMzlnRWZTcVcyUnc)
 
@@ -41,7 +41,7 @@ sudo kill -HUP $(pidof tor)
 #### Dependencies:
 tor python-notify
 
-* [Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
+[Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
 
 ---
 [Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
