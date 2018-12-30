@@ -7,7 +7,7 @@ tor
 
 #### [Usage](https://drive.google.com/open?id=0B79r4wTVj-CZVy10Ujg5Vjl5WFk):
 ```python
-toriptables2.py -h
+toriptables2.py
 ```
 #### To test:
 * [Check My IP](http://www.check-my-ip.net)
