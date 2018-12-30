@@ -44,7 +44,6 @@ tor python-notify
 [Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
 
 ---
-[Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
-
 [Optional Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
 
+[Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
