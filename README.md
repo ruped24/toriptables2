@@ -42,8 +42,9 @@ sudo kill -HUP $(pidof tor)
 ---
 ## [toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
 #### Dependencies:
-tor python-notify
-
+```bash
+apt install tor python-notify
+```
 [Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
 
 ---
