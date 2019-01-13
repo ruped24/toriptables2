@@ -40,7 +40,7 @@ sudo kill -HUP $(pidof tor)
 * [Tor IPTables rules loaded](https://drive.google.com/open?id=0B79r4wTVj-CZT0NMV2VZRTM1REE)
 
 ---
-## [toriptables2g for GUI Desktop with notification](https://bitbucket.org/ruped24/toriptables2g/src)
+## [toriptables2g with GUI notification](https://bitbucket.org/ruped24/toriptables2g/src)
 #### Dependencies:
 ```bash
 apt install tor python-notify
