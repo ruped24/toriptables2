@@ -4,7 +4,9 @@
 Tor Iptables script is an anonymizer that sets up iptables and tor to route all services and traffic including DNS through the Tor network.
 
 #### Dependencies:
+```bash
 apt install tor
+```
 
 #### [Usage](https://drive.google.com/open?id=0B79r4wTVj-CZVy10Ujg5Vjl5WFk):
 ```python
