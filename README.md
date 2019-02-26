@@ -13,7 +13,7 @@ apt install tor
 toriptables2.py
 ```
 #### To test:
-* [Check My IP](http://www.check-my-ip.net)
+* [Check My IPx](https://ipx.ac/)
 * [Check Tor Project](https://check.torproject.org)
 * [Witch proxy checker](http://witch.valdikss.org.ru)
 * [Do I leak](http://www.doileak.com/)
