@@ -1,5 +1,5 @@
 # toriptables2 
-![](https://img.shields.io/badge/toriptables2-python_2.7-blue.svg) ![](https://img.shields.io/badge/dependencies-tor-orange.svg) ![](https://img.shields.io/badge/GPL-v2-blue.svg)
+![](https://img.shields.io/badge/toriptables2-python_2.7-blue.svg?style=flat-square) ![](https://img.shields.io/badge/dependencies-tor-orange.svg?style=flat-square) ![](https://img.shields.io/badge/GPL-v2-blue.svg?style=flat-square)
 
 Tor Iptables script is an anonymizer that sets up iptables and tor to route all services and traffic including DNS through the Tor network.
 
@@ -15,7 +15,6 @@ toriptables2.py
 #### To test:
 * [Check My IPx](https://ipx.ac/)
 * [Check Tor Project](https://check.torproject.org)
-* [Witch proxy checker](http://witch.valdikss.org.ru)
 * [Do I leak](http://www.doileak.com/)
 * [DNS leak test](http://dnsleaktest.com)
 * [Test IPv6](http://ipv6-test.com/)
