@@ -18,6 +18,7 @@ toriptables2.py
 * [Do I leak](http://www.doileak.com/)
 * [DNS leak test](http://dnsleaktest.com)
 * [Test IPv6](http://ipv6-test.com/)
+* [What is my proxy](http://whatismyproxy.com)
 * [What every Browser knows about you](http://webkay.robinlinus.com/)
 
 
