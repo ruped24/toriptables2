@@ -67,7 +67,7 @@ DNSPort %s
           while retries < 12 and not my_public_ip:
             retries += 1
             try:
-              my_public_ip = load(urlopen('http://ipinfo.io/json'))['ip']
+              my_public_ip = load(urlopen('https://check.torproject.org/api/ip'))['IP']
             except URLError:
               sleep(5)
               print(" [\033[93m?\033[0m] Still waiting for IP address...")
