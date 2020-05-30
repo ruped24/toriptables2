@@ -71,9 +71,11 @@ DNSPort %s
             except URLError:
               sleep(5)
               print(" [\033[93m?\033[0m] Still waiting for IP address...")
+            except ValueError:
+              break
           print
           if not my_public_ip:
-            my_public_ip = getoutput('wget -qO - v4.ifconfig.co')
+            my_public_ip = getoutput('wget -qO - ifconfig.me')
           if not my_public_ip:
             exit(" \033[91m[!]\033[0m Can't get public ip address!")
           print(" {0}".format("[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
