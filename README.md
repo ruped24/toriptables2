@@ -48,10 +48,9 @@ Install [python-notify](http://ftp.br.debian.org/debian/pool/main/n/notify-pytho
 ```bash
 apt install tor
 ```
-
-
-
-[Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
+#### Screenshots:
+* [Kali Linux, Rolling Edition](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
+* [Kali Linux, Rolling Edition](https://drive.google.com/file/d/1NPZ1SKI9rh9XkaplF2_DzHSoPL77aiy-/view?usp=sharing)
 
 ---
 [Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
