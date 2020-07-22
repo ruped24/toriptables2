@@ -22,7 +22,7 @@ toriptables2.py
 * [What every Browser knows about you](http://webkay.robinlinus.com/)
 
 
-#### To change TOR IP address:
+#### To change Tor IP address:
 ##### Refresh Check Tor Project webpage
 ```bash
  toriptables2.py -r
