@@ -23,7 +23,6 @@ toriptables2.py
 
 
 #### To change Tor IP address:
-##### Refresh Check Tor Project webpage
 ```bash
  toriptables2.py -r
 ```
