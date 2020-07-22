@@ -22,10 +22,10 @@ toriptables2.py
 * [What every Browser knows about you](http://webkay.robinlinus.com/)
 
 
-#### To manually change IP w/o reload:
+#### To change TOR IP address:
 ##### Refresh Check Tor Project webpage
 ```bash
-sudo kill -HUP $(pidof tor)
+ toriptables2.py -r
 ```
 #### To automate changing Tor IP:
 * [Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZOGJadlBtWWxPWFk)
