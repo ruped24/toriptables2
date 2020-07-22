@@ -39,7 +39,7 @@ AutomapHostsOnResolve 1
 TransPort %s
 DNSPort %s
 ''' % (basename(__file__), self.trans_port, self.virtual_net,
-    self.trans_port, self.local_dnsport)
+       self.trans_port, self.local_dnsport)
 
   def flush_iptables_rules(self):
     call(["iptables", "-F"])
