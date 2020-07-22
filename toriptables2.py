@@ -1,5 +1,5 @@
 #! /usr/bin/env python2
-# Written by Rupe version 2
+# Written by Rupe version 2.1
 #
 """
 Tor Iptables script is an anonymizer
@@ -12,7 +12,6 @@ from commands import getoutput
 from subprocess import call, check_call, CalledProcessError
 from os.path import isfile, basename
 from os import devnull
-import os
 from sys import stdout, stderr
 from atexit import register
 from argparse import ArgumentParser
@@ -26,7 +25,7 @@ class TorIptables(object):
   def __init__(self):
     self.local_dnsport = "53"  # DNSPort
     self.virtual_net = "10.0.0.0/10"  # VirtualAddrNetwork
-    self.local_loopback = "127.0.0.1" # Local loopback 
+    self.local_loopback = "127.0.0.1" # Local loopback
     self.non_tor_net = ["192.168.0.0/16", "172.16.0.0/12"]
     self.non_tor = ["127.0.0.0/9", "127.128.0.0/10", "127.0.0.0/8"]
     self.tor_uid = getoutput("id -ur debian-tor")  # Tor user uid
@@ -39,7 +38,7 @@ VirtualAddrNetwork %s
 AutomapHostsOnResolve 1
 TransPort %s
 DNSPort %s
-''' % (basename(__file__), self.trans_port, self.virtual_net, 
+''' % (basename(__file__), self.trans_port, self.virtual_net,
     self.trans_port, self.local_dnsport)
 
   def flush_iptables_rules(self):
@@ -115,7 +114,9 @@ DNSPort %s
       my_public_ip = getoutput('wget -qO - ifconfig.me')
     if not my_public_ip:
       exit(" \033[91m[!]\033[0m Can't get public ip address!")
-    print(" {0}".format("[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))    
+    print(" {0}".format("[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
+
+
 if __name__ == '__main__':
   parser = ArgumentParser(
       description=
@@ -131,7 +132,7 @@ if __name__ == '__main__':
   parser.add_argument('-r',
                       '--refresh',
                       action='store_true',
-                      help='This option will change the circuit and gives another IP address')
+                      help='This option will change the circuit and gives new IP')
   parser.add_argument('-i',
                       '--ip',
                       action='store_true',
@@ -154,7 +155,7 @@ if __name__ == '__main__':
     elif args.ip:
       load_tables.get_ip()
     elif args.refresh:
-      os.system("kill -HUP $(pidof tor)")
+      call(['kill', '-HUP', '%s' % getoutput('pidof tor')])
       load_tables.get_ip()
     else:
       parser.print_help()
