@@ -58,6 +58,8 @@ DNSPort %s
               stdout=fnull, stderr=fnull)
 
         if tor_restart is 0:
+          print(" {0}".format(
+            "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
           self.get_ip()
       except CalledProcessError as err:
         print("\033[91m[!] Command failed: %s\033[0m" % ' '.join(err.cmd))
@@ -94,8 +96,6 @@ DNSPort %s
     call(["iptables", "-A", "OUTPUT", "-j", "REJECT"])
 
   def get_ip(self):
-    print(" {0}".format(
-        "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
     print(" {0}".format(
         "[\033[92m*\033[0m] Getting public IP, please wait..."))
     retries = 0
