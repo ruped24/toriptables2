@@ -59,7 +59,7 @@ DNSPort %s
 
         if tor_restart is 0:
           print(" {0}".format(
-            "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
+              "[\033[92m+\033[0m] Anonymizer status \033[92m[ON]\033[0m"))
           self.get_ip()
       except CalledProcessError as err:
         print("\033[91m[!] Command failed: %s\033[0m" % ' '.join(err.cmd))
