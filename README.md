@@ -52,6 +52,6 @@ apt install tor
 * [Kali Linux, Rolling Edition](https://drive.google.com/file/d/1NPZ1SKI9rh9XkaplF2_DzHSoPL77aiy-/view?usp=sharing)
 
 ---
-[Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
+[**Installation Methods**](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
 
-[Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
+[**Troubleshooting and FAQ**](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
