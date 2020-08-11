@@ -39,7 +39,9 @@ toriptables2.py -l
 * [Tor IPTables rules loaded](https://drive.google.com/open?id=0B79r4wTVj-CZT0NMV2VZRTM1REE)
 
 ---
-## [toriptables2g with GUI notification](https://bitbucket.org/ruped24/toriptables2g/src)
+## [toriptables2g w/ GUI notification](https://bitbucket.org/ruped24/toriptables2g/src)
+<details><summary>Expand for toriptables2g installation and usage</summary>
+
 #### Dependencies:
 
 Install [python-notify](http://ftp.br.debian.org/debian/pool/main/n/notify-python/python-notify_0.1.1-4_amd64.deb)
@@ -48,8 +50,10 @@ Install [python-notify](http://ftp.br.debian.org/debian/pool/main/n/notify-pytho
 apt install tor
 ```
 #### Screenshots:
-* [Kali Linux, Rolling Edition](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
-* [Kali Linux, Rolling Edition](https://drive.google.com/file/d/1NPZ1SKI9rh9XkaplF2_DzHSoPL77aiy-/view?usp=sharing)
+* [Kali Linux, Rolling Edition [ON]](https://drive.google.com/open?id=0B79r4wTVj-CZSEdkaTBNOVc5aUU)
+* [Kali Linux, Rolling Edition [OFF]](https://drive.google.com/file/d/1NPZ1SKI9rh9XkaplF2_DzHSoPL77aiy-/view?usp=sharing)
+
+</details>
 
 ---
 [**Installation Methods**](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
