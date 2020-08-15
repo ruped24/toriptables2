@@ -32,11 +32,15 @@ toriptables2.py -l
 * [Tor IP Switcher](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
 
 #### Screenshots:
+<details><summary>Expand for Screenshots</summary>
+ 
 * [KaliBang Linux Rolling](https://drive.google.com/open?id=1fHtOvukq0j3dcSKk6Yw_d2L3JuXnjNav)
 
 * [Kali Linux, Rolling Edition](https://drive.google.com/open?id=0B79r4wTVj-CZMzlnRWZTcVcyUnc)
 
 * [Tor IPTables rules loaded](https://drive.google.com/open?id=0B79r4wTVj-CZT0NMV2VZRTM1REE)
+
+</details>
 
 ---
 ## [toriptables2g w/ GUI notification](https://bitbucket.org/ruped24/toriptables2g/src)
