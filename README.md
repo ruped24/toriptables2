@@ -29,7 +29,7 @@ toriptables2.py -l
 #### To automate changing Tor IP:
 * [Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZOGJadlBtWWxPWFk)
 
-* [tor_ip_switcher](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
+* [Tor IP Switcher](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
 
 #### Screenshots:
 * [KaliBang Linux Rolling](https://drive.google.com/open?id=1fHtOvukq0j3dcSKk6Yw_d2L3JuXnjNav)
