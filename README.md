@@ -7,6 +7,7 @@ Tor Iptables script is an anonymizer that sets up iptables and tor to route all 
 ```bash
 apt install tor
 ```
+---
 
 #### [Usage](https://drive.google.com/open?id=0B79r4wTVj-CZVy10Ujg5Vjl5WFk):
 ```python
