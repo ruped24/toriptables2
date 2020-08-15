@@ -15,6 +15,8 @@ apt install tor
 ```python
 toriptables2.py -l
 ```
+---
+
 #### To test:
 * [Check My IPx](https://ipx.ac/)
 * [Check Tor Project](https://check.torproject.org)
