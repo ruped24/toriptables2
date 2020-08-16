@@ -42,6 +42,8 @@ toriptables2.py -l
 
 * [Tor IP Switcher](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
 
+---
+
 #### Screenshots:
 <details><summary>Expand for Screenshots</summary>
  
