@@ -17,7 +17,10 @@ toriptables2.py -l
 ```
 ---
 
-#### To test:
+#### To test anonymity:
+<details><summary>Expand for anonymity test</summary>
+<br>
+ 
 * [Check My IPx](https://ipx.ac/)
 * [Check Tor Project](https://check.torproject.org)
 * [Do I leak](http://www.doileak.com/)
@@ -26,6 +29,7 @@ toriptables2.py -l
 * [What is my proxy](http://whatismyproxy.com)
 * [What every Browser knows about you](http://webkay.robinlinus.com/)
 
+</details>
 
 #### To change Tor IP address:
 ```bash
