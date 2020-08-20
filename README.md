@@ -41,9 +41,9 @@ toriptables2.py -r
 <details><summary>Expand for tor ip switcher</summary>
 <br>
 
-[► Screenshot](https://drive.google.com/open?id=0B79r4wTVj-CZOGJadlBtWWxPWFk)
+[► **Screenshot**](https://drive.google.com/open?id=0B79r4wTVj-CZOGJadlBtWWxPWFk)
 
-[► Tor IP Switcher](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
+[► **Tor IP Switcher**](https://github.com/ruped24/tor_ip_switcher#tor_ip_switcher)
 
 </details>
 
