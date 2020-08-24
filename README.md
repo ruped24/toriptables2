@@ -1,6 +1,8 @@
 # toriptables2 
 ![](https://img.shields.io/badge/toriptables2-python_2.7-blue.svg?style=flat-square) ![](https://img.shields.io/badge/dependencies-tor-orange.svg?style=flat-square) ![](https://img.shields.io/badge/GPL-v2-blue.svg?style=flat-square) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square)](https://github.com/ruped24/toriptables2/graphs/commit-activity)
 
+Tor Iptables script is an anonymizer that sets up iptables and tor to route all services and traffic including DNS through the Tor network. 
+
 ---
 
 #### Dependencies:
