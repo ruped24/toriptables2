@@ -12,7 +12,7 @@ from commands import getoutput
 from subprocess import call, check_call, CalledProcessError
 from os.path import isfile, basename
 from os import devnull
-from sys import stdout, stderr
+from sys import exit, stdout, stderr
 from atexit import register
 from argparse import ArgumentParser
 from json import load
