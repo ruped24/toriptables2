@@ -83,3 +83,11 @@ apt install tor
 ### [Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
 
 ### [Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
+
+---
+
+### ToDo:
+- [ ] Python3.x version, **[toriptables3](https://github.com/ruped24/toriptables2/wiki/Troubleshooting#faq)**
+- [x] Compiled [toriptables2.py](https://github.com/ruped24/toriptables2/releases/tag/2-2.1) as an ELF 64-bit LSB executable, x86-64
+
+---
