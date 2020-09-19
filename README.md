@@ -88,6 +88,6 @@ apt install tor
 
 ### ToDo:
 - [ ] Python3.x version, **toriptables3**. See FAQ.
-- [x] Compile toriptables2.py as an [ELF 64-bit LSB x86-64 executable](https://github.com/ruped24/toriptables2/releases/tag/2-2.1).
+- [x] Compile toriptables2.py as an **[ELF 64-bit LSB x86-64 executable](https://github.com/ruped24/toriptables2/releases/tag/2-2.1)**.
 
 ---
