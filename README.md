@@ -87,7 +87,7 @@ apt install tor
 ---
 
 ### ToDo:
-- [ ] Python3.x version, **toriptables3**
-- [x] Compiled [toriptables2.py](https://github.com/ruped24/toriptables2/releases/tag/2-2.1) as an ELF 64-bit LSB executable, x86-64
+- [ ] Python3.x version, **toriptables3**. See FAQ.
+- [x] Compiled [toriptables2.py](https://github.com/ruped24/toriptables2/releases/tag/2-2.1) as an ELF 64-bit LSB executable, x86-64.
 
 ---
