@@ -91,10 +91,10 @@ apt install tor
 <details><summary>Expand for toriptables3</summary>
 <br>
 
-The successor to the Python2.7 version.
+The successor to the Python 2.7 version.
 
 
-Upgrade to the [Python3.8 version](https://github.com/ruped24/toriptables3#toriptables3). 
+Upgrade to the [Python 3.8 version](https://github.com/ruped24/toriptables3#toriptables3). 
 
 
 </details>
