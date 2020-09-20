@@ -34,9 +34,14 @@ toriptables2.py -l
 ---
 
 #### To change Tor IP address:
+<details><summary>Expand for change Tor IP</summary>
+<br>
+
 ```bash
 toriptables2.py -r
 ```
+</details>
+
 ---
 
 #### To automate changing Tor IP:
