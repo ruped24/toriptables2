@@ -85,12 +85,6 @@ apt install tor
 </details>
 
 ---
-### [Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
-
-### [Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
-
----
-
 
 # [toriptables3](https://github.com/ruped24/toriptables3)
 <details><summary>Expand for toriptables3</summary>
@@ -103,3 +97,7 @@ The successor to the [Python 2.7 version](https://github.com/ruped24/toriptables
 </details>
 
 ---
+
+### [Installation Methods](https://github.com/ruped24/toriptables2/wiki/Optional-Installation-methods-for-toriptables2.py)
+
+### [Troubleshooting and FAQ](https://github.com/ruped24/toriptables2/wiki/Troubleshooting)
