@@ -73,8 +73,6 @@ toriptables2.py -r
 
 #### Dependencies:
 
-Install [python-notify](http://ftp.br.debian.org/debian/pool/main/n/notify-python/python-notify_0.1.1-4_amd64.deb)
-
 ```bash
 apt install tor
 ```
