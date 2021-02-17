@@ -23,7 +23,7 @@ toriptables2.py -l
  
 * [Check My IPx](https://ipx.ac/)
 * [Check Tor Project](https://check.torproject.org)
-* [Do I leak](http://www.doileak.com/)
+* [Do I leak](https://www.doileak.com/classic.html)
 * [DNS leak test](http://dnsleaktest.com)
 * [Test IPv6](http://ipv6-test.com/)
 * [What is my proxy](http://whatismyproxy.com)
