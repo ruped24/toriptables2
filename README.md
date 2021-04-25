@@ -103,9 +103,7 @@ apt install tor
 <details><summary>Expand for toriptables3</summary>
 <br>
 
-Upgrade to [toriptables3](https://github.com/ruped24/toriptables3/releases/tag/v3.0). 
-
-The successor to [toriptables2](https://github.com/ruped24/toriptables2/releases/tag/2-2.1).
+Upgrade to [toriptables3](https://github.com/ruped24/toriptables3/releases/tag/v3.0). The successor to [toriptables2](https://github.com/ruped24/toriptables2/releases/tag/2-2.1).
 
 </details>
 
