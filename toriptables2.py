@@ -111,7 +111,7 @@ DNSPort %s
         break
     print
     if not my_public_ip:
-      my_public_ip = getoutput('wget -qO - ifconfig.me')
+      my_public_ip = getoutput('wget -qO - ident.me')
     if not my_public_ip:
       exit(" \033[91m[!]\033[0m Can't get public ip address!")
     print(" {0}".format("[\033[92m+\033[0m] Your IP is \033[92m%s\033[0m" % my_public_ip))
