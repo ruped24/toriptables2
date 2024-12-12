@@ -82,7 +82,7 @@ apt install tor
 <br>
  
 * [Kali Linux, Rolling Edition [ON]](https://drive.google.com/file/d/0B79r4wTVj-CZSEdkaTBNOVc5aUU/view?usp=sharing&resourcekey=0-frPlDawa9X9McBn3evXjIQ)
-* [Kali Linux, Rolling Edition [OFF]](https://drive.google.com/file/d/1NPZ1SKI9rh9XkaplF2_DzHSoPL77aiy-/view?usp=sharing)
+* [Kali Linux, Rolling Edition [OFF]](https://drive.google.com/file/d/1NPZ1SKI9rh9XkaplF2_DzHSoPL77aiy-/view)
 
 </details>
 
