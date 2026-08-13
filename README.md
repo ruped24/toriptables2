@@ -11,9 +11,9 @@ apt install tor
 ```
 ---
 
-#### [Usage](https://drive.google.com/open?id=0B79r4wTVj-CZVy10Ujg5Vjl5WFk):
-```python
-toriptables2.py -l
+#### [Usage](https://github.com/ruped24/toriptables2/releases/tag/2-2.1):
+```bash
+toriptables2 -l
 ```
 ---
 
